@@ -11,3 +11,5 @@ add prompt
 add exports
 #add vim
 #add conda
+
+

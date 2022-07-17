@@ -1,9 +1,21 @@
 autoload -Uz vcs_info
 autoload -U colors && colors
-zstyle ':vcs_info:*' enable git 
 precmd() { vcs_info }
 setopt PROMPT_SUBST
-zstyle ':vcs_info:git:*' formats '  %b'
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:*' formats "%u%c"
+zstyle ':vcs_info:git:*' formats '  %b %u%c%m'
+zstyle ':vcs_info:git*+set-message:*' hooks untracked-git
++vi-untracked() {
+  if [[ -n "$(git ls-files --others --exclude standard)" ]]; then
+      hook_com[misc]='?'
+  else
+      hook_com[misc]=''
+  fi
+}
 PS1='%{$fg[blue]%}%1~%{$fg[yellow]%}${vcs_info_msg_0_} %{$fg[green]%} %{$reset_color%}'
 
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "

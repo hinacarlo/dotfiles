@@ -4,6 +4,7 @@ alias vi='nvim'
 alias update='sudo apt update && sudo apt upgrade'
 alias gaa='git add -A'
 alias gcm='git commit -m'
+alias gr='git restore --staged'
 alias xs="xset r rate 300 50"
 #tmux
 alias t="tmux"

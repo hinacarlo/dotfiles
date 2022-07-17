@@ -1,0 +1,34 @@
+#!$(which zsh)
+# carlo aliases
+alias vi='nvim' 
+alias update='sudo apt update && sudo apt upgrade'
+alias gaa='git add -A'
+alias gcm='git commit -m'
+alias xs="xset r rate 300 50"
+#tmux
+alias t="tmux"
+alias ta="tmux attach -t"
+alias tx="tmux kill-session -t"
+alias tn="tmux new -s"
+
+
+#list
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias ll='ls -alFh'
+alias l='ls'
+alias l.="ls -A | egrep '^\.'"
+
+#fix obvious typo's
+alias cd..='cd ..'
+alias pdw='pwd'
+
+alias tobash="sudo chsh $USER -s /usr/bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /usr/bin/zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /usr/bin/fish && echo 'Now log out.'"
+
+alias nb="$EDITOR ~/.bashrc"
+alias nz="$EDITOR ~/.zshrc"
+#systeminfo
+alias probe="sudo -E hw-probe -all -upload"
+alias sysfailed="systemctl list-units --failed"

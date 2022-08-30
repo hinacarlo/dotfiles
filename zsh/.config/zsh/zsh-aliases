@@ -5,7 +5,9 @@ alias update='sudo apt update && sudo apt upgrade'
 alias gaa='git add -A'
 alias gcm='git commit -m'
 alias gr='git restore --staged'
-alias xs="xset r rate 300 50"
+#alias xs="xset r rate 300 50"
+alias kr="gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30"
+alias kd="gsettings set org.gnome.desktop.peripherals.keyboard delay 300"
 #tmux
 alias t="tmux"
 alias ta="tmux attach -t"

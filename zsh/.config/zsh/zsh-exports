@@ -1,4 +1,4 @@
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim"
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 #export PATH="$PATH:$(yarn global bin)"

@@ -8,11 +8,11 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm #bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm #bash_completion
 
-export PATH="~/.npm-packages/bin:$PATH"
+#export PATH="~/.npm-packages/bin:$PATH"
 #NPM_PACKAGES="${HOME}/.npm-packages"
 
 neofetch

@@ -13,3 +13,5 @@ add exports
 #add conda
 
 
+
+alias luamake=/home/carlo/lua-language-server/3rd/luamake/luamake

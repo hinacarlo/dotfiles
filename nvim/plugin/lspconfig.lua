@@ -49,10 +49,15 @@ for _, lsp in pairs(servers) do
   }
 end
 
+
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
       diagnostics = {
         globals = { 'vim' },
       },
@@ -68,19 +73,3 @@ nvim_lsp.sumneko_lua.setup {
 }
 
 
-require('lspconfig')['pyright'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
-require('lspconfig')['tsserver'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
-require('lspconfig')['rust_analyzer'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-    -- Server-specific settings...
-    settings = {
-      ["rust-analyzer"] = {}
-    }
-}

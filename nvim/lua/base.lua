@@ -34,11 +34,10 @@ local options = {
   sidescrolloff = 8,
   autoindent = true,
   showcmd = true,
-  cmdheight = 1,
   laststatus = 2,
   breakindent = true,
   backspace = 'start,eol,indent',
-  
+
 }
 
 

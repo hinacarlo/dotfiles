@@ -57,7 +57,7 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
--- vim.cmd [[colorscheme catppuccin]]
+vim.cmd [[colorscheme catppuccin]]
 --vim.cmd [[colorscheme gruvbox]]
 --vim.cmd [[colorscheme nightfox]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"

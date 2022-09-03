@@ -113,7 +113,7 @@ telescope.load_extension('file_browser')
 vim.keymap.set("n", ";f",
   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>")
 
-vim.keymap.set("n", ";b", function() 
+vim.keymap.set("n", ";b", function()
   builtin.buffers()
 end)
 

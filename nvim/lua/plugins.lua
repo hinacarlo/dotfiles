@@ -50,9 +50,9 @@ return require('packer').startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
 
   -- Treesitter and TS modules
-  use { 
+  use {
       "nvim-treesitter/nvim-treesitter", --> treesitter
-      run = ":TSUpdate" } 
+      run = ":TSUpdate" }
 	use "nvim-treesitter/nvim-treesitter-refactor"
 	use "p00f/nvim-ts-rainbow"
   use "windwp/nvim-ts-autotag"

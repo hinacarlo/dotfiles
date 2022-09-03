@@ -71,10 +71,10 @@ return require('packer').startup(function(use)
   "catppuccin/nvim",
   as = "catppuccin",
   }
-  --use {
-  --  "svrana/neosolarized.nvim",
-  --  requires = { 'tjdevries/colorbuddy.nvim' }
- -- }
+  use {
+    "svrana/neosolarized.nvim",
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
 
   -- Lualine
   use {

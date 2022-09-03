@@ -76,7 +76,7 @@ return require('packer').startup(function(use)
 
 
 
-  -- colors
+  -- Colorschemes
   use "shaunsingh/nord.nvim"
   use "EdenEast/nightfox.nvim"
   use "lifepillar/vim-gruvbox8"

@@ -112,6 +112,11 @@ telescope.load_extension('file_browser')
 
 vim.keymap.set("n", ";f",
   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>")
+
+vim.keymap.set("n", ";b", function() 
+  builtin.buffers()
+end)
+
 vim.keymap.set("n", ";r", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 vim.keymap.set("n", "sf", function() telescope.extensions.file_browser.file_browser({
     path = "%:p:h",

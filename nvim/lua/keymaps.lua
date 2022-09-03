@@ -13,6 +13,9 @@ vim.g.maplocalleader = " "
 -- do not yank with x
 keymap('n', 'x', '"_x"', opts)
 
+-- New tab
+keymap('n', 'te', ':tabedit<CR>', opts)
+
 -- delete a word backwards
 keymap('n', 'dw', 'vb"_d', opts)
 

@@ -1,7 +1,8 @@
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  PACKER_BOOTSTRAP = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+    install_path })
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -36,9 +37,11 @@ return require('packer').startup(function(use)
 
   use "norcalli/nvim-colorizer.lua"
   use "nvim-lua/plenary.nvim"
+  use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
 
   -- LSP
   use "neovim/nvim-lspconfig"
+  use "glepnir/lspsaga.nvim"
 
   -- nvim-cmp and snippets
   use "hrsh7th/nvim-cmp"
@@ -53,9 +56,10 @@ return require('packer').startup(function(use)
   -- Treesitter and TS modules
   use {
     "nvim-treesitter/nvim-treesitter", --> treesitter
-    run = ":TSUpdate" }
-	use "nvim-treesitter/nvim-treesitter-refactor"
-	use "p00f/nvim-ts-rainbow"
+    run = ":TSUpdate"
+  }
+  use "nvim-treesitter/nvim-treesitter-refactor"
+  use "p00f/nvim-ts-rainbow"
   use "windwp/nvim-ts-autotag"
   use "windwp/nvim-autopairs"
   use "numToStr/Comment.nvim"
@@ -72,14 +76,14 @@ return require('packer').startup(function(use)
 
 
 
-   -- colors
+  -- colors
   use "shaunsingh/nord.nvim"
   use "EdenEast/nightfox.nvim"
   use "lifepillar/vim-gruvbox8"
   use "ellisonleao/gruvbox.nvim"
   use {
-  "catppuccin/nvim",
-  as = "catppuccin",
+    "catppuccin/nvim",
+    as = "catppuccin",
   }
   use {
     "svrana/neosolarized.nvim",
@@ -88,8 +92,8 @@ return require('packer').startup(function(use)
 
   -- Lualine
   use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
   if PACKER_BOOTSTRAP then

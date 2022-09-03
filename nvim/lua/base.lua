@@ -58,7 +58,7 @@ for k, v in pairs(options) do
 end
 
 --vim.cmd [[colorscheme catppuccin]]
---vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme gruvbox8_hard]]
 --vim.cmd [[colorscheme nightfox]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]

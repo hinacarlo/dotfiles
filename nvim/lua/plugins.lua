@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
   -- Automatically set up your configuration after cloning packer.nvim
 
   use "norcalli/nvim-colorizer.lua"
+  use "nvim-lua/plenary.nvim"
 
   -- LSP
   use "neovim/nvim-lspconfig"
@@ -51,8 +52,8 @@ return require('packer').startup(function(use)
 
   -- Treesitter and TS modules
   use {
-      "nvim-treesitter/nvim-treesitter", --> treesitter
-      run = ":TSUpdate" }
+    "nvim-treesitter/nvim-treesitter", --> treesitter
+    run = ":TSUpdate" }
 	use "nvim-treesitter/nvim-treesitter-refactor"
 	use "p00f/nvim-ts-rainbow"
   use "windwp/nvim-ts-autotag"
@@ -60,6 +61,15 @@ return require('packer').startup(function(use)
   use "numToStr/Comment.nvim"
   use "lukas-reineke/indent-blankline.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    run = "make"
+  }
+  use "nvim-telescope/telescope-file-browser.nvim"
+
 
 
    -- colors
@@ -80,7 +90,7 @@ return require('packer').startup(function(use)
   use {
   'nvim-lualine/lualine.nvim',
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-}
+  }
 
   if PACKER_BOOTSTRAP then
     require('packer').sync()

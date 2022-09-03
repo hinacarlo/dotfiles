@@ -2,6 +2,7 @@ local status, telescope = pcall(require, "telescope")
 if (not status) then return end
 
 local actions = require("telescope.actions")
+local fb_actions = require("telescope").extensions.file_browser.actions
 local builtin = require("telescope.builtin")
 
 local function telescope_buffer_dir()
@@ -104,6 +105,13 @@ telescope.setup {
     },
     file_browser = {
       theme = "dropdown",
+      mappings = {
+        ["n"] = {
+          ["N"] = fb_actions.create,
+          ["h"] = fb_actions.goto_parent_dir,
+
+        }
+      }
     }
   },
 }

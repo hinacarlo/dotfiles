@@ -22,6 +22,9 @@ keymap('n', 'dw', 'vb"_d', opts)
 -- select all
 keymap('n', '<C-a>', 'gg<S-v>G', opts)
 
+-- Nvim-tree
+keymap('n', '<space>e', ':NvimTreeToggle<cr>', opts)
+
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",

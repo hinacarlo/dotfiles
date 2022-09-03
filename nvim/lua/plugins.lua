@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
   use "norcalli/nvim-colorizer.lua"
   use "nvim-lua/plenary.nvim"
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
+  use "kyazdani42/nvim-tree.lua"
 
   -- LSP
   use "neovim/nvim-lspconfig"

@@ -49,6 +49,18 @@ return require('packer').startup(function(use)
   use "L3MON4D3/LuaSnip"
   use "saadparwaiz1/cmp_luasnip"
 
+  -- Treesitter and TS modules
+  use { 
+      "nvim-treesitter/nvim-treesitter", --> treesitter
+      run = ":TSUpdate" } 
+	use "nvim-treesitter/nvim-treesitter-refactor"
+	use "p00f/nvim-ts-rainbow"
+  use "windwp/nvim-ts-autotag"
+  use "windwp/nvim-autopairs"
+  use "numToStr/Comment.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+
 
    -- colors
   use "shaunsingh/nord.nvim"
@@ -70,7 +82,7 @@ return require('packer').startup(function(use)
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 
-  if packer_bootstrap then
+  if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
 end)

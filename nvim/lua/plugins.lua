@@ -94,6 +94,8 @@ return require('packer').startup(function(use)
     "svrana/neosolarized.nvim",
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
+  use "mhartington/oceanic-next"
+  use "folke/tokyonight.nvim"
 
   -- Lualine
   use {

@@ -36,7 +36,7 @@ local on_attach = function(client, bufnr)
 end
 
 
-local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls', 'eslint' }
+local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls', 'eslint_d' }
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {

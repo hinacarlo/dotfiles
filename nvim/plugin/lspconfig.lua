@@ -37,7 +37,9 @@ end
 
 
 local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls', 'eslint_d' }
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+local capabilities = require('cmp_nvim_lsp').update_capabilities(
+  vim.lsp.protocol.make_client_capabilities()
+)
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,

@@ -40,7 +40,7 @@ local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls', 'eslint_d' }
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
-for _, lsp in pairs(servers) do
+--[[for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
     flags = {
@@ -48,10 +48,10 @@ for _, lsp in pairs(servers) do
     },
     capabilities = capabilities
   }
-end
+end --]]
 
 
-nvim_lsp.sumneko_lua.setup {
+--[[ nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -70,7 +70,7 @@ nvim_lsp.sumneko_lua.setup {
       },
     }
   }
-}
+} --]]
 
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

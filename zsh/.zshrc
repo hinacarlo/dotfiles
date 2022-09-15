@@ -15,4 +15,6 @@ export NVM_DIR="$HOME/.nvm"
 #export PATH="~/.npm-packages/bin:$PATH"
 #NPM_PACKAGES="${HOME}/.npm-packages"
 
+export PATH="${HOME}/.dotfiles/nvim/lua-language-server/bin:${PATH}"
+
 neofetch

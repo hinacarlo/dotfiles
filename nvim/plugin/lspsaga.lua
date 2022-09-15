@@ -14,3 +14,5 @@ keymap("n", "K", "::Lspsaga hover_doc<CR>", opts)
 keymap("n", "gh", ":Lspsaga lsp_finder<CR>", opts)
 keymap("n", "gr", ":Lspsaga rename<CR>", opts)
 keymap("n", "ca", ":Lspsaga code_action<CR>", opts)
+keymap("n", "cd", ":Lspsaga show_line_diagnostics<CR>", opts)
+

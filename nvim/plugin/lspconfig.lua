@@ -13,6 +13,7 @@ local opts = { noremap = true, silent = true }
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+  print("LSP attached");
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -36,8 +37,7 @@ local on_attach = function(client, bufnr)
 end
 
 
-local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls' } 
---[['eslint_d' ]]
+local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls', 'eslint_d' }
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
@@ -49,21 +49,28 @@ for _, lsp in pairs(servers) do
     },
     capabilities = capabilities
   }
-end 
+end
 
 -- set lua path
---[[ local sumneko_root_path = 'home/carlo/.dotfiles/nvim/lua-language-server'
-local sumneko_binary = sumneko_root_path..'/bin/' ..system_name.. '/lua-language-server' ]]
+local sumneko_root_path = '/home/carlo/.config/nvim/lua-language-server'
+local sumneko_binary = '/home/carlo/.config/nvim/lua-language-server/bin/lua-language-server'
+
+
+local runtime_path = vim.split(package.path, ";")
+table.insert(runtime_path, "lua/?.lua")
+table.insert(runtime_path, "lua/?/init.lua")
 
 nvim_lsp.sumneko_lua.setup {
-  --[[ cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua'}; ]]
+  cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
   on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'lua' },
   settings = {
     Lua = {
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
         version = 'LuaJIT',
-        --[[ path = vim.split(package.path, ';') ]]
+        path = runtime_path
       },
       diagnostics = {
         globals = { 'vim' },
@@ -79,16 +86,17 @@ nvim_lsp.sumneko_lua.setup {
       }
     }
   }
-} 
+}
 
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
-  severity_sort = true,
-}
+    underline = true,
+    update_in_insert = false,
+    virtual_text = { spacing = 4, prefix = "●" },
+    severity_sort = true,
+    signs = true,
+  }
 )
 
 -- Diagnostic symbols in the sign column (gutter)

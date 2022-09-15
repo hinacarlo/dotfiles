@@ -40,7 +40,7 @@ local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls', 'eslint_d' }
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
---[[for _, lsp in pairs(servers) do
+for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
     flags = {
@@ -48,16 +48,20 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
     },
     capabilities = capabilities
   }
-end --]]
+end 
 
+-- set lua path
+local sumneko_root_path = 'home/carlo/.dotfiles/nvim/lua-language-server'
+local sumneko_binary = sumneko_root_path..'/bin/'..system_name..'/lua-language-server'
 
---[[ nvim_lsp.sumneko_lua.setup {
+nvim_lsp.sumneko_lua.setup {
+  cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua'};
   on_attach = on_attach,
   settings = {
     Lua = {
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
+        --[[ version = 'LuaJIT', ]]
       },
       diagnostics = {
         globals = { 'vim' },
@@ -65,12 +69,19 @@ end --]]
 
       workspace = {
         -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false
+        --[[ library = vim.api.nvim_get_runtime_file("", true), ]]
+        --[[ checkThirdParty = false ]]
+        library = {
+          [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+          [vim.fn.stdpath "config" .. "/lua"] = true,
+        },
       },
+      telemetry = {
+        enable = false
+      }
     }
   }
-} --]]
+} 
 
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

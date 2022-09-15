@@ -4,3 +4,4 @@
 
 zsh/.config/zsh/plugins/
 nvim/plugin/packer_compiled.lua
+nvim/lua-language-server/

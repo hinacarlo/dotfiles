@@ -1,11 +1,11 @@
 # Steps to install neovim and configurations
 
 1. Check if neovim 7.3 is available in the package manager
- - if not, build it 
-  link https://github.com/neovim/neovim
+  - if not, build it 
+  https://github.com/neovim/neovim
 
 2. Install packer
-  link https://github.com/wbthomason/packer.nvim
+  https://github.com/wbthomason/packer.nvim
 
 3. Install packages for lspconfig servers
 
@@ -15,7 +15,7 @@
 
 5. Install ripgrep
   - check if available in your package manager
-  link https://github.com/BurntSushi/ripgrep#installation
+  https://github.com/BurntSushi/ripgrep#installation
 
 
 

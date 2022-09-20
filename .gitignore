@@ -3,5 +3,6 @@
 *.swo
 
 zsh/.config/zsh/plugins/
+zsh/.config/zsh/.zcompcache/ZYPPER_ALL_RAW
 nvim/plugin/packer_compiled.lua
 nvim/lua-language-server/

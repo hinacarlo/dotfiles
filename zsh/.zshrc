@@ -18,3 +18,4 @@ export NVM_DIR="$HOME/.nvm"
 #export PATH="$HOME/.config/nvim/lua-language-server/bin:$PATH"
 
 neofetch
+source ~/powerlevel10k/powerlevel10k.zsh-theme

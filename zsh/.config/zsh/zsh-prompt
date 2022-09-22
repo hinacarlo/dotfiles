@@ -16,7 +16,7 @@ zstyle ':vcs_info:git*+set-message:*' hooks untracked-git
       hook_com[misc]=''
   fi
 }
-PS1='%{$fg[blue]%}%1~%{$fg[yellow]%}${vcs_info_msg_0_} %{$fg[green]%}🤌 🏼%{$reset_color%}'
+PS1='%{$fg[blue]%}%1~%{$fg[yellow]%}${vcs_info_msg_0_} %{$fg[green]%}💯 🏼%{$reset_color%}'
 # 
 
 

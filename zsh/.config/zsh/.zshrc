@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 source $ZDOTDIR/zsh-functions
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 install "zsh-users" "zsh-autosuggestions"
 install "zsh-users" "zsh-syntax-highlighting"

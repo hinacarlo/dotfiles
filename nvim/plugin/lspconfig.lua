@@ -52,8 +52,8 @@ for _, lsp in pairs(servers) do
 end
 
 -- set lua path
-local sumneko_root_path = '/home/carlo/.config/nvim/lua-language-server'
-local sumneko_binary = '/home/carlo/.config/nvim/lua-language-server/bin/lua-language-server'
+local sumneko_root_path = '/home/carlo/.dotfiles/nvim/lua-language-server'
+local sumneko_binary = '/home/carlo/.dotfiles/nvim/lua-language-server/bin/lua-language-server'
 
 
 local runtime_path = vim.split(package.path, ";")

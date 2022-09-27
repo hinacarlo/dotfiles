@@ -44,7 +44,8 @@ local options = {
 vim.opt.shortmess:append "c"
 vim.opt.path:append { '**' }
 --vim.opt.wildignore:append { '*/node_modules/*' }
-vim.o.background = "dark"
+--vim.o.background = "dark"
+vim.o.background = "light"
 vim.opt.path:append { '**' }
 
 -- turn off paste mode
@@ -58,15 +59,27 @@ for k, v in pairs(options) do
 end
 
 --vim.cmd [[colorscheme OceanicNext]]
---vim.cmd [[colorscheme tokyonight]]
+--[[ vim.cmd [[colorscheme tokyonight]] 
+--[[ vim.g.tokyonight_style = "day" ]]
 --vim.g.tokyonight_style = "storm"
---vim.cmd [[colorscheme catppuccin]]
-vim.cmd [[colorscheme gruvbox8_hard]]
+
+vim.g.catppuccin_flavour = "latte"
+
+vim.cmd [[colorscheme catppuccin]]
+--vim.cmd [[colorscheme gruvbox8_hard]]
 --vim.cmd [[colorscheme nightfox]]
+--vim.cmd [[colorscheme neosolarized]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd [[set directory=~/.vim/.swp//]]
-vim.cmd [[ autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE]]
+--vim.cmd [[ autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE]]
+
+--[[ vim.api.nvim_create_autocmd("OptionSet", {
+  pattern = "background",
+  callback = function() 
+    vim.cmd("Catppuccin " .. (vim.v.option_new == "light" and "latte" or "mocha"))
+  end
+}) ]]
 
 

@@ -7,3 +7,4 @@ zsh/.config/zsh/.zcompcache/ZYPPER_ALL_RAW
 zsh/.config/zsh/.zcompdump
 nvim/plugin/packer_compiled.lua
 nvim/lua-language-server/
+kitty/kitty-themes

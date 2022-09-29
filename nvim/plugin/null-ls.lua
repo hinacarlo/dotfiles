@@ -10,9 +10,9 @@ null_ls.setup {
   debug = false,
   sources = {
     formatting.prettierd.with({ extra_args = { "--double-quote", "--jsx-single-quote" } }),
-    formatting.eslint_d.with({
+    --[[ formatting.eslint_d.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
-    })
+    }) ]]
   },
   on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then

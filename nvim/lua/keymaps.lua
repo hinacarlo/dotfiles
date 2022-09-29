@@ -13,6 +13,9 @@ vim.g.maplocalleader = " "
 -- do not yank with x
 keymap('n', 'x', '"_x"', opts)
 
+-- yank to clipboard
+keymap('v', '<leader>y', '"+y', opts)
+
 -- New tab
 keymap('n', 'te', ':tabedit<CR>', opts)
 

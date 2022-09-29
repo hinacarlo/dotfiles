@@ -64,7 +64,7 @@ lualine.setup({
 		icons_enabled = true,
 		--theme = "tokyonight",
 		--theme = "gruvbox",
-		theme = "catppuccin",
+		--theme = "catppuccin",
     --theme = "solarized_dark",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },

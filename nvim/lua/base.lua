@@ -58,20 +58,20 @@ for k, v in pairs(options) do
 end
 
 --vim.cmd [[colorscheme OceanicNext]]
---[[ vim.cmd [[colorscheme tokyonight]] 
---[[ vim.g.tokyonight_style = "day" ]]
+--vim.cmd [[colorscheme tokyonight]]
+--vim.g.tokyonight_style = "day"
 --vim.g.tokyonight_style = "storm"
 
-vim.g.catppuccin_flavour = "latte"
+-- vim.g.catppuccin_flavour = "latte"
 
-vim.cmd [[colorscheme catppuccin]]
---vim.cmd [[colorscheme gruvbox8_hard]]
+--vim.cmd [[colorscheme catppuccin]]
+vim.cmd [[colorscheme gruvbox]]
 --vim.cmd [[colorscheme nightfox]]
 --vim.cmd [[colorscheme neosolarized]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd [[set directory=~/.vim/.swp//]]
---vim.cmd [[ autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE]]
+vim.cmd [[ autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE]]
 
 

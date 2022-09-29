@@ -8,3 +8,4 @@ zsh/.config/zsh/.zcompdump
 nvim/plugin/packer_compiled.lua
 nvim/lua-language-server/
 kitty/kitty-themes
+kitty/theme.conf

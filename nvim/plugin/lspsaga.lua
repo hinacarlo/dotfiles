@@ -3,8 +3,11 @@ if (not status) then return end
 
 -- LSP Saga
 
-saga.init_lsp_saga()
-
+saga.init_lsp_saga({
+  symbol_in_winbar = {
+    enable = false
+  }
+})
 local keymap = vim.api.nvim_set_keymap
 
 local opts = { noremap = true, silent = true }

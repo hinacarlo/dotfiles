@@ -9,7 +9,7 @@ local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 null_ls.setup {
   debug = false,
   sources = {
-    formatting.prettierd.with({ extra_args = { "--double-quote", "--jsx-single-quote" } }),
+    formatting.prettierd.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
     --[[ formatting.eslint_d.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }) ]]

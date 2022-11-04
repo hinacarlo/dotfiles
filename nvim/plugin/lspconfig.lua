@@ -37,7 +37,7 @@ local on_attach = function(client, bufnr)
 end
 
 
-local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls' }
+local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls', 'tailwindcss' }
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )

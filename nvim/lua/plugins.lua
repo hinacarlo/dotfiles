@@ -59,19 +59,19 @@ return require('packer').startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
 
   -- Treesitter and TS modules
-  use {
-    "nvim-treesitter/nvim-treesitter", --> treesitter
-    run = function() require('nvim-treesitter-install').update({ with_sync = true}) end,
-    --run = ":TSUpdate")
+  use { 
+    "nvim-treesitter/nvim-treesitter", -- > treesitter 
+    run = function() require('nvim-treesitter-install').update({ with_sync = true}) end, 
+    --run = ":TSUpdate") 
   }
-  use "nvim-treesitter/nvim-treesitter-context"
+  use "nvim-treesitter/nvim-treesitter-context" 
   use "nvim-treesitter/nvim-treesitter-refactor"
   use "p00f/nvim-ts-rainbow"
   use "windwp/nvim-ts-autotag"
-  use "windwp/nvim-autopairs"
-  use "numToStr/Comment.nvim"
-  use "lukas-reineke/indent-blankline.nvim"
-  use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "windwp/nvim-autopairs" 
+  use "numToStr/Comment.nvim" 
+  use "lukas-reineke/indent-blankline.nvim" 
+  use "JoosepAlviste/nvim-ts-context-commentstring" 
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"

@@ -60,9 +60,9 @@ return require('packer').startup(function(use)
 
   -- Treesitter and TS modules
   use { 
-    "nvim-treesitter/nvim-treesitter", -- > treesitter 
-    run = function() require('nvim-treesitter-install').update({ with_sync = true}) end, 
-    --run = ":TSUpdate") 
+   "nvim-treesitter/nvim-treesitter", -- > treesitter 
+  run = function() require('nvim-treesitter-install').update({ with_sync = true}) end, 
+  --run = ":TSUpdate") 
   }
   use "nvim-treesitter/nvim-treesitter-context" 
   use "nvim-treesitter/nvim-treesitter-refactor"

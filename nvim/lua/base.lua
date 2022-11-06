@@ -43,8 +43,8 @@ local options = {
 vim.opt.shortmess:append "c"
 vim.opt.path:append { '**' }
 --vim.opt.wildignore:append { '*/node_modules/*' }
---vim.o.background = "dark"
-vim.o.background = "light"
+vim.o.background = "dark"
+--vim.o.background = "light"
 vim.opt.path:append { '**' }
 
 -- turn off paste mode
@@ -65,7 +65,7 @@ end
 -- vim.g.catppuccin_flavour = "latte"
 
 --vim.cmd [[colorscheme catppuccin]]
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme gruvbox8_hard]]
 --vim.cmd [[colorscheme nightfox]]
 --vim.cmd [[colorscheme neosolarized]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"

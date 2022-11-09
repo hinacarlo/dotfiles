@@ -4,15 +4,16 @@ if not null_ls_status_ok then
 end
 
 local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 
 null_ls.setup {
   debug = false,
   sources = {
     formatting.prettierd.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
-    --[[ formatting.eslint_d.with({
+    diagnostics.eslint_d.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
-    }) ]]
+    })
   },
   on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then

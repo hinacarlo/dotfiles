@@ -33,11 +33,11 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   --vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   -- vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
 
-local servers = { 'html', 'tsserver', 'cssls', 'emmet_ls', 'tailwindcss' }
+local servers = { 'html', 'tsserver', 'cssls', 'tailwindcss' }
 local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
@@ -51,6 +51,14 @@ for _, lsp in pairs(servers) do
   }
 end
 
+nvim_lsp.emmet_ls.setup {
+  on_attach = on_attach,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  capabilities = capabilities,
+  filetypes = { 'html', 'typescript', 'typescriptreact', 'javascript', 'javascriptreact', 'css', 'sass', 'scss', 'less' }
+}
 -- set lua path
 local sumneko_root_path = '/home/carlo/.dotfiles/nvim/lua-language-server'
 local sumneko_binary = '/home/carlo/.dotfiles/nvim/lua-language-server/bin/lua-language-server'
@@ -91,12 +99,12 @@ nvim_lsp.sumneko_lua.setup {
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    update_in_insert = false,
-    virtual_text = { spacing = 4, prefix = "●" },
-    severity_sort = true,
-    signs = true,
-  }
+  underline = true,
+  update_in_insert = false,
+  virtual_text = { spacing = 4, prefix = "●" },
+  severity_sort = true,
+  signs = true,
+}
 )
 
 -- Diagnostic symbols in the sign column (gutter)

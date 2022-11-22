@@ -2,7 +2,7 @@
 # carlo aliases
 alias vi='nvim' 
 #alias update='sudo dnf update && sudo dnf upgrade'
-alias update='sudo apt update && sudo apt upgrade'
+alias update='sudo apt update && sudo apt upgrade && flatpak update'
 alias gaa='git add -A'
 alias gcm='git commit -m'
 alias gr='git restore --staged'

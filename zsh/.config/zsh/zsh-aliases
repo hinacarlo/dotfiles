@@ -15,6 +15,9 @@ alias ta="tmux attach -t"
 alias tx="tmux kill-session -t"
 alias tn="tmux new -s"
 
+# nvm install node with previous packages
+alias nvmin='nvm install node --reinstall-packages-from=node'
+
 
 #list
 alias ls='ls --color=auto'

@@ -17,4 +17,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="$HOME/.dotfiles/nvim/lua-language-server/bin:$PATH"
 
-neofetch
+#neofetch

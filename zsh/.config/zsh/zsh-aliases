@@ -1,6 +1,6 @@
 #!$(which zsh)
 # carlo aliases
-alias vi='nvim' 
+#alias vi='nvim' 
 #alias update='sudo dnf update && sudo dnf upgrade'
 alias update='sudo apt update && sudo apt upgrade && flatpak update'
 alias gaa='git add -A'
@@ -39,3 +39,4 @@ alias nz="$EDITOR ~/.zshrc"
 #systeminfo
 alias probe="sudo -E hw-probe -all -upload"
 alias sysfailed="systemctl list-units --failed"
+alias setdate="sudo dpkg-reconfigure tzdata"

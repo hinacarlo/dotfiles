@@ -8,21 +8,21 @@ fi
 source $ZDOTDIR/zsh-functions
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-install "zsh-users" "zsh-autosuggestions"
-install "zsh-users" "zsh-syntax-highlighting"
+#install "zsh-users" "zsh-autosuggestions"
+#install "zsh-users" "zsh-syntax-highlighting"
 #install "agkozak" "zsh-z"
 
 add aliases
-add completion
+#add completion
 #add prompt
 #add fzf
-add exports
+#add exports
 #add vim
 #add conda
 
 
 
-alias luamake=/home/carlo/lua-language-server/3rd/luamake/luamake
+#alias luamake=/home/carlo/lua-language-server/3rd/luamake/luamake
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

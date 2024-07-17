@@ -1,6 +1,6 @@
 #!$(which zsh)
 # carlo aliases
-#alias vi='nvim' 
+alias vi='nvim' 
 #alias update='sudo dnf update && sudo dnf upgrade'
 alias update='sudo apt update && sudo apt upgrade && flatpak update'
 alias gaa='git add -A'
@@ -18,6 +18,10 @@ alias tn="tmux new -s"
 
 # nvm install node with previous packages
 alias nvmin='nvm install node --reinstall-packages-from=node'
+
+#battery conservation mode
+# alias onbat = "echo 1  >  /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
+#alias offbat = echo 0  >  /sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode
 
 
 #list

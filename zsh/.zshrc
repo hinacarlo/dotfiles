@@ -16,6 +16,9 @@ export NVM_DIR="$HOME/.nvm"
 #NPM_PACKAGES="${HOME}/.npm-packages"
 
 export PATH="$HOME/.dotfiles/nvim/lua-language-server/bin:$PATH"
+export PATH="$HOME/Maven/apache-maven-3.9.4/bin:$PATH"
+export PATH="$HOME/jdk-11.0.20.1+1/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 #neofetch
 source ~/powerlevel10k/powerlevel10k.zsh-theme
